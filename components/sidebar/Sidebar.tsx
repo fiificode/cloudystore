@@ -4,10 +4,16 @@ import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import {usePathname} from "next/navigation"
+import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
-import { FilePlus2, FilesIcon, FolderUp, LayoutDashboard, StarIcon } from "lucide-react";
+import {
+  FilePlus2,
+  FilesIcon,
+  FolderUp,
+  LayoutDashboard,
+  StarIcon,
+} from "lucide-react";
 import { Button } from "../ui/button";
 
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
@@ -40,7 +46,7 @@ const Sidebar = () => {
       <div className="px-3 py-2 flex-1">
         <Link href={"/dashboard"} className="flex items-center pl-3 mb-14">
           <div className="relative w-8 h-8 mr-4">
-            <Image fill alt="Logo" src={"/logo.png"} />
+            <Image fill alt="Logo" sizes="8" src={"/logo.png"} />
           </div>
           <h1 className={cn("text-xl font-bold", montserrat.className)}>
             CloudyStore
@@ -51,7 +57,12 @@ const Sidebar = () => {
             <Link
               href={route.href}
               key={route.href}
-              className={cn("text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-orange-300/20 rounded-lg transition",pathname === route.href ? "text-white bg-orange-300/20":"text-white")}
+              className={cn(
+                "text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-orange-300/20 rounded-lg transition",
+                pathname === route.href
+                  ? "text-white bg-orange-300/20"
+                  : "text-white"
+              )}
             >
               <div className="flex items-center flex-1">
                 <route.icon className={cn("h-5 w-5 mr-3", route.color)} />
@@ -63,12 +74,12 @@ const Sidebar = () => {
         <div className="mt-32 flex p-3 flex-col gap-3 w-full">
           <div className="createFloder">
             <Button variant={"folder"}>
-              <FolderUp className="w-9 -h-9"/> Add Folder
+              <FolderUp className="w-9 -h-9" /> Add Folder
             </Button>
           </div>
           <div className="addFile w-full">
             <Button variant={"file"}>
-              <FilePlus2 className="w-9 -h-9"/> Add New File
+              <FilePlus2 className="w-9 -h-9" /> Add New File
             </Button>
           </div>
         </div>

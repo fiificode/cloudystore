@@ -12,6 +12,7 @@ const buttonVariants = cva(
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         folder: "bg-blue-400 text-primary-foreground hover:bg-primary/90",
         file: "bg-indigo-300 text-primary-foreground hover:bg-primary/90",
+        add: "bg-orange-400 text-primary-foreground hover:bg-primary/90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:

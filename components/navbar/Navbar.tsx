@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className='flex justify-evenly items-center p-4'>
         <MobileSidebar />
-        <div className='md:pl-64 w-full'>
+        <div className='lg:pl-64 w-full'>
         <Searchbar />
         </div>
         <div className="flex w-full justify-end">

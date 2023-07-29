@@ -10,8 +10,11 @@ import { cn } from "@/lib/utils";
 import {
   FilePlus2,
   FilesIcon,
+  Folder,
   FolderUp,
+  ImageIcon,
   LayoutDashboard,
+  PlayCircleIcon,
   StarIcon,
 } from "lucide-react";
 import { Button } from "../ui/button";
@@ -29,6 +32,30 @@ const routes = [
     label: "My Files",
     icon: FilesIcon,
     href: "/my-files",
+    color: "text-indigo-400",
+  },
+  {
+    label: "My Folders",
+    icon: FolderUp,
+    href: "/my-folders",
+    color: "text-sky-400",
+  },
+  {
+    label: "Documents",
+    icon: Folder,
+    href: "/documents",
+    color: "text-orange-400",
+  },
+  {
+    label: "Images",
+    icon: ImageIcon,
+    href: "/images",
+    color: "text-[#ffe0e8]",
+  },
+  {
+    label: "Media",
+    icon: PlayCircleIcon,
+    href: "/media",
     color: "text-indigo-400",
   },
   {
@@ -74,7 +101,7 @@ const Sidebar = () => {
         <div className="mt-32 flex p-3 flex-col gap-3 w-full">
           <div className="createFloder">
             <Button variant={"folder"}>
-              <FolderUp className="w-9 -h-9" /> Add Folder
+              <FolderUp className="w-9 -h-9" /> Add a Folder
             </Button>
           </div>
           <div className="addFile w-full">

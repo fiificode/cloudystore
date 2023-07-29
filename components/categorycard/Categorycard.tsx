@@ -3,6 +3,7 @@ import { ArrowRight, Folder, MoreHorizontal } from 'lucide-react'
 import { Progress } from "@/components/ui/progress"
 import React, { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
+import Link from 'next/link'
 
 const Categorycard = ({
   name,
@@ -11,6 +12,7 @@ const Categorycard = ({
   files,
   background,
   value,
+  href,
 }:any) => {
   const [isMounted,setIsMounted] = useState(false);
   useEffect(() => {
@@ -47,7 +49,9 @@ const Categorycard = ({
         </div>
         <div className=' border-t-[0.8px] w-full border-t-gray-400'>
           <div className='px-4 flex mt-2 flex-row justify-between items-center text-[12px]'>
+            <Link href={href}>
             <h4 className='font-bold'>View</h4>
+            </Link>
             <div>
               <ArrowRight className='w-3 h-3' />
             </div>

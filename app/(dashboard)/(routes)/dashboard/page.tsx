@@ -13,6 +13,7 @@ const DashboardPage = () => {
       icon: <Folder className="w-5 h-5" />,
       files: 123,
       value: 33,
+      href: "/documents"
     },
     {
       id: 2,
@@ -22,6 +23,7 @@ const DashboardPage = () => {
       files: 223,
       background: "bg-[#ffe0e8]",
       value: 50,
+      href:"/images"
     },
     {
       id: 3,
@@ -31,6 +33,7 @@ const DashboardPage = () => {
       files: 423,
       background: "bg-[#e6dff7]",
       value: 85,
+      href:"/media"
     },
   ];
   return (
@@ -64,6 +67,7 @@ const DashboardPage = () => {
                     files={card.files}
                     color={card.color}
                     icon={card.icon}
+                    href={card.href}
                   />
                 </div>
               );
